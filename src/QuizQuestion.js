@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import QuizQuestionButton from './QuizQuestionButton.js'
+//npm import QuizQuestionButton from './QuizQuestionButton.js'
 
 class QuizQuestion extends Component{
 
@@ -11,22 +11,15 @@ class QuizQuestion extends Component{
   }
 
     render(){
-        return <main>
+        return       <main>
         <section>
-          <p>{this.props.quiz_question.instruction_text}</p>
+          <p>// instruction text goes here</p>
         </section>
         <section className="buttons">
           <ul>
-            {
-              this.props.quiz_question.answer_options.map((answer_option, index) => {
-                return <QuizQuestionButton key={index} button_text={answer_option} clickHandler={this.handleClick.bind(this)}/>
-              })
-            }
+            //quiz question button logic goes here
           </ul>
         </section>
-        {
-          this.state.incorrectAnswer ? <p className='error'>Sorry, that's not right.</p> : null
-        }
       </main>
     }
 
